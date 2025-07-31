@@ -1,4 +1,4 @@
-package com.table.tracking.entity;
+package com.table.tracking.generaterq.entity;
 
 
 import lombok.Data;

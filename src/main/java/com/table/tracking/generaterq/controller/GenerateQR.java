@@ -1,6 +1,6 @@
 package com.table.tracking.generaterq.controller;
 
-import com.table.tracking.entity.Hotel;
+import com.table.tracking.generaterq.entity.Hotel;
 import com.table.tracking.generaterq.service.GenerateQRService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200","http://15.207.117.225"})
 @RestController
 @RequestMapping("/hotel")
 public class GenerateQR {

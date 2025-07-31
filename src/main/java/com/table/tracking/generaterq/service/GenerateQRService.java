@@ -1,13 +1,12 @@
 package com.table.tracking.generaterq.service;
 
-import com.table.tracking.entity.Hotel;
+import com.table.tracking.generaterq.entity.Hotel;
 import net.glxn.qrgen.QRCode;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.io.ByteArrayOutputStream;
@@ -23,7 +22,7 @@ public class GenerateQRService {
        hotel.setLatitude(String.valueOf(17.4033));
        hotel.setLongitude(String.valueOf(78.4774));
 
-        String baseUrl = "http://13.232.37.142/menu"; // or use IP/localhost for testing
+        String baseUrl = "http://15.207.117.225//menu"; // or use IP/localhost for testing
 //        String data = String.format("%s?hotelId=%s&lat=%s&lng=%s",
 //                baseUrl, hotel.getHotelId(), hotel.getLatitude(), hotel.getLongitude());
         String data=String.format("%s?hotelId=%s",baseUrl,hotelId);
