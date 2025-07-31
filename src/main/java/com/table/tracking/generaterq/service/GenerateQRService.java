@@ -22,7 +22,7 @@ public class GenerateQRService {
        hotel.setLatitude(String.valueOf(17.4033));
        hotel.setLongitude(String.valueOf(78.4774));
 
-        String baseUrl = "http://15.207.117.225//menu"; // or use IP/localhost for testing
+        String baseUrl = "http://15.207.117.225/menu"; // or use IP/localhost for testing
 //        String data = String.format("%s?hotelId=%s&lat=%s&lng=%s",
 //                baseUrl, hotel.getHotelId(), hotel.getLatitude(), hotel.getLongitude());
         String data=String.format("%s?hotelId=%s",baseUrl,hotelId);
