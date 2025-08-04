@@ -16,19 +16,17 @@ public class GenerateQRService {
 
 
     public ResponseEntity<byte[]> generateQRCode(@PathVariable String hotelId)throws Exception{
-        Hotel  hotel=new Hotel();
-       hotel.setHotelName("Sai");
-       hotel.setHotelId(hotelId);
-       hotel.setLatitude(String.valueOf(17.4033));
-       hotel.setLongitude(String.valueOf(78.4774));
+        //hotelId="CAT000001";
+        String baseUrl = "https://13.204.69.86/menu";
+        String data = String.format("%s/%s", baseUrl, hotelId);
 
-        String baseUrl = "http://15.207.117.225/menu"; // or use IP/localhost for testing
-//        String data = String.format("%s?hotelId=%s&lat=%s&lng=%s",
-//                baseUrl, hotel.getHotelId(), hotel.getLatitude(), hotel.getLongitude());
-        String data=String.format("%s?hotelId=%s",baseUrl,hotelId);
-        ByteArrayOutputStream stream = QRCode.from(data).withSize(250, 250).stream();
+        ByteArrayOutputStream stream = QRCode.from(data)
+                .withSize(250, 250)
+                .stream();
+
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_PNG);
+
         return new ResponseEntity<>(stream.toByteArray(), headers, HttpStatus.OK);
     }
 }
