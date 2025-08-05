@@ -29,6 +29,7 @@ public class GenerateQR {
         hotel.setHotelId(hotelId);
         hotel.setLatitude(17.456678);
         hotel.setLongitude(18.654333);
+        hotel.setName("Sai");
 
         return  ResponseEntity.ok(hotel);
     }

@@ -17,7 +17,7 @@ public class GenerateQRService {
 
     public ResponseEntity<byte[]> generateQRCode(@PathVariable String hotelId)throws Exception{
         //hotelId="CAT000001";
-        String baseUrl = "https://13.204.69.86/menu";
+        String baseUrl = "https://3.110.121.122/menu";
         String data = String.format("%s/%s", baseUrl, hotelId);
 
         ByteArrayOutputStream stream = QRCode.from(data)
